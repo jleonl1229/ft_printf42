@@ -12,7 +12,7 @@ int ft_printf(char const *format, ...) {
     va_start(args, format);
     while (format[i] != '\0')
     {
-        total += va_arg(args, int);
+        // total += va_arg(args, int);
 
         write(1, &format[i], 1);
         i++;
