@@ -2,25 +2,28 @@
 #include <stdio.h>
 #include <unistd.h>
 
-int ft_printf(int num_args, ...) {
+int ft_printf(char const *format, ...) {
     va_list args;
     int total;
     int i;
 
     total = 0;
     i = 0;
-    va_start(args, num_args);
-    while (i < num_args)
+    va_start(args, format);
+    while (format[i] != '\0')
     {
-        //total += va_arg(args, int);
+        total += va_arg(args, int);
 
-        write(1, va_arg(args, int), 1);
+        write(1, &format[i], 1);
         i++;
     }
+    write(1, format, 1);
     va_end(args);
+    return (0);
 }
 
 int main() {
-    ft_printf('c');
-    return 0;
+    ft_printf("cdf");
+    // printf("c");
+    return (0);
 }
