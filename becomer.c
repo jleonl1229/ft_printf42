@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   becomer.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jleon-la <jleon-la@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 16:56:01 by jleon-la          #+#    #+#             */
-/*   Updated: 2024/01/25 13:08:33 by jleon-la         ###   ########.fr       */
+/*   Created: 2024/01/25 12:50:58 by jleon-la          #+#    #+#             */
+/*   Updated: 2024/01/25 12:52:02 by jleon-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdarg.h>
-# include <stdio.h>
-# include <unistd.h>
+int	getchar(char o, va_list args)
+{
+	char	c;
 
-int	ft_printf(char const *format, ...);
-int	getchar(char o, va_list args);
-
-#endif
+	if (o == 'c')
+	{
+		c = (char) va_arg(args, int);
+		write(1, &c, 1);
+		return (1);
+	}
+	return (0);
+}

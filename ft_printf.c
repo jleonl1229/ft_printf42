@@ -6,24 +6,11 @@
 /*   By: jleon-la <jleon-la@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 11:56:45 by jleon-la          #+#    #+#             */
-/*   Updated: 2024/01/25 12:43:25 by jleon-la         ###   ########.fr       */
+/*   Updated: 2024/01/25 13:12:14 by jleon-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-int	option(char o, va_list args)
-{
-	char	c;
-
-	if (o == 'c')
-	{
-		c = (char) va_arg(args, int);
-		write(1, &c, 1);
-		return (1);
-	}
-	return (0);
-}
 
 int	ft_printf(char const *format, ...)
 {
@@ -37,8 +24,11 @@ int	ft_printf(char const *format, ...)
 	while (format[i] != '\0')
 	{
 		if (format[i] == '%')
-			total += option((char) &format[++i], args);
-		write(1, &format[i], 1);
+		{
+			if (format[++i] == 'c')
+				total += getchar((char) &format[i++], args);
+		}
+		//write(1, &format[i], 1);
 		i++;
 	}
 	total += i;
