@@ -6,36 +6,29 @@
 /*   By: jleon-la <jleon-la@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 12:50:58 by jleon-la          #+#    #+#             */
-/*   Updated: 2024/01/25 15:23:13 by jleon-la         ###   ########.fr       */
+/*   Updated: 2024/01/25 17:12:27 by jleon-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_getchar(char o, va_list args)
+int	ft_getchar(char o)
 {
-	char	c;
-
-	if (o == 'c')
-	{
-		c = (char) va_arg(args, int);
-		write(1, &c, 1);
-		return (1);
-	}
-	return (0);
+	write(1, &o, 1);
+	return (1);
 }
 
-// int	ft_getstr(char *o, va_list args)
-// {
-// 	int		count;
-// 	char	c;
+int	ft_getstr(char *o)
+{
+	int	i;
 
-// 	c = (char) va_arg(args, int);
-// 	count = 0;
-// 	while (*o != '\0')
-// 	{
-// 		o++;
-// 		count++;
-// 	}
-// 	return (count);
-// }
+	i = 0;
+	while (o[i] != '\0')
+	{
+		write(1, &o[i], 1);
+		i++;
+	}
+	return (i);
+}
+
+
