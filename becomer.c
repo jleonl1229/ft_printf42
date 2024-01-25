@@ -6,13 +6,13 @@
 /*   By: jleon-la <jleon-la@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 12:50:58 by jleon-la          #+#    #+#             */
-/*   Updated: 2024/01/25 12:52:02 by jleon-la         ###   ########.fr       */
+/*   Updated: 2024/01/25 15:23:13 by jleon-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	getchar(char o, va_list args)
+int	ft_getchar(char o, va_list args)
 {
 	char	c;
 
@@ -24,3 +24,18 @@ int	getchar(char o, va_list args)
 	}
 	return (0);
 }
+
+// int	ft_getstr(char *o, va_list args)
+// {
+// 	int		count;
+// 	char	c;
+
+// 	c = (char) va_arg(args, int);
+// 	count = 0;
+// 	while (*o != '\0')
+// 	{
+// 		o++;
+// 		count++;
+// 	}
+// 	return (count);
+// }

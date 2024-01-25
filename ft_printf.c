@@ -6,7 +6,7 @@
 /*   By: jleon-la <jleon-la@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 11:56:45 by jleon-la          #+#    #+#             */
-/*   Updated: 2024/01/25 13:12:14 by jleon-la         ###   ########.fr       */
+/*   Updated: 2024/01/25 15:26:55 by jleon-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,10 @@ int	ft_printf(char const *format, ...)
 		if (format[i] == '%')
 		{
 			if (format[++i] == 'c')
-				total += getchar((char) &format[i++], args);
+				total += ft_getchar((char)&format[i], args);
+			else if (format[++i] == '%')
+				write(1, "%", 1);
 		}
-		//write(1, &format[i], 1);
 		i++;
 	}
 	total += i;

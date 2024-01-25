@@ -6,7 +6,7 @@
 /*   By: jleon-la <jleon-la@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 16:56:01 by jleon-la          #+#    #+#             */
-/*   Updated: 2024/01/25 13:08:33 by jleon-la         ###   ########.fr       */
+/*   Updated: 2024/01/25 15:20:25 by jleon-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@
 # include <unistd.h>
 
 int	ft_printf(char const *format, ...);
-int	getchar(char o, va_list args);
+int	ft_getchar(char o, va_list args);
 
 #endif
