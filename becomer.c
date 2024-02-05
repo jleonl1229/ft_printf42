@@ -6,7 +6,7 @@
 /*   By: jleon-la <jleon-la@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 12:50:58 by jleon-la          #+#    #+#             */
-/*   Updated: 2024/02/05 15:35:35 by jleon-la         ###   ########.fr       */
+/*   Updated: 2024/02/05 17:33:39 by jleon-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,23 +31,28 @@ int	ft_getstr(char *o)
 	return (i);
 }
 
-int	ft_address(void *address, char *base)
-{
-	int		i;
+// int	ft_address(void *address, char *base)
+// {
+// 	int		i;
 
-	write(1, "0x", 2);
-	i = 0;
-	if (address >= 16)
-		i = ft_address(address / 16, base);
-	write(1, &base[address % 16], 1);
-	return (i + 2);
-}
+// 	write(1, "0x", 2);
+// 	i = 0;
+// 	if (address >= 16)
+// 		i = ft_address(address / 16, base);
+// 	write(1, &base[address % 16], 1);
+// 	return (i + 2);
+// }
 
 int	ft_getint(int num, char *base)
 {
 	int	i;
 
 	i = 0;
+	if (num < 0)
+	{
+		num = num * (-1);
+		write(1, "-", 1);
+	}
 	if (num >= 10)
 		i = ft_getint(num / 10, base);
 	return (write(1, &base[num % 10], 1) + i);

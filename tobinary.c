@@ -1,13 +1,15 @@
 #include <stdio.h>
 #include <unistd.h>
 
-void ft_tobnary(int num, char *base)
+int ft_tobnary(int num, char *base)
 {
     char    c;
+    int     i;
 
+    i = 0;
     if (num > 0)
-        ft_tobnary(num / 2, base);
-    printf("%c", base[num % 2]);
+        i += ft_tobnary(num / 2, base);
+    return (write(1, base[num % 2], 1) + i);
 }
 
 int ft_tohex(int num, char *base)

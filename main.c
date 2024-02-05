@@ -6,7 +6,7 @@
 /*   By: jleon-la <jleon-la@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 16:16:29 by jleon-la          #+#    #+#             */
-/*   Updated: 2024/02/05 15:24:27 by jleon-la         ###   ########.fr       */
+/*   Updated: 2024/02/05 17:30:57 by jleon-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	main(void)
 	ft_printf("Hola %s\n", "buenas");
 	// printf("\nHola %s", "buenas");
 // %d %i
-	ft_printf("Decimal numbers: %i | %d\n", 91, 91);
+	ft_printf("Decimal numbers: %i | %d\n", 91, -91);
 	// printf("\nDecimal numbers: %i | %d", 91);
 // %u
 	ft_printf("Decimal unsigned number: %u\n", 91);
