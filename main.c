@@ -6,7 +6,7 @@
 /*   By: jleon-la <jleon-la@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 16:16:29 by jleon-la          #+#    #+#             */
-/*   Updated: 2024/02/02 18:03:44 by jleon-la         ###   ########.fr       */
+/*   Updated: 2024/02/05 15:24:27 by jleon-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int	main(void)
 	int		num;
 
 	num = 123;
+	int *ptr = &num;
 // %c
 	ft_printf("Hola %c\n", 'z');
 	// printf("\nHola %c", 'z');
@@ -31,5 +32,10 @@ int	main(void)
 // %x
 	ft_printf("Hex number: %x\n", 91);
 	// printf("\nHex number: %x", 91);
+// %X
+	ft_printf("Hex upper number: %X\n", 91);
+// %p
+	ft_printf("Address: %p\n", ptr);
+	printf("Address: %p\n", ptr);
 	return (0);
 }
