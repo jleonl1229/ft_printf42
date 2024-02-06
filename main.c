@@ -6,7 +6,7 @@
 /*   By: jleon-la <jleon-la@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 16:16:29 by jleon-la          #+#    #+#             */
-/*   Updated: 2024/02/05 17:30:57 by jleon-la         ###   ########.fr       */
+/*   Updated: 2024/02/06 12:37:45 by jleon-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ int	main(void)
 	num = 123;
 	int *ptr = &num;
 // %c
-	ft_printf("Hola %c\n", 'z');
-	// printf("\nHola %c", 'z');
+	ft_printf("Hola %%c\n");
+	printf("Hola %%c\n");
 // %s
 	ft_printf("Hola %s\n", "buenas");
 	// printf("\nHola %s", "buenas");
@@ -30,8 +30,8 @@ int	main(void)
 // %u
 	ft_printf("Decimal unsigned number: %u\n", 91);
 // %x
-	ft_printf("Hex number: %x\n", 91);
-	// printf("\nHex number: %x", 91);
+	ft_printf("Hex number: %x\n", -91);
+	printf("Hex number: %x\n", -91);
 // %X
 	ft_printf("Hex upper number: %X\n", 91);
 // %p

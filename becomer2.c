@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   becomer2.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jleon-la <jleon-la@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 16:56:01 by jleon-la          #+#    #+#             */
-/*   Updated: 2024/02/06 09:48:07 by jleon-la         ###   ########.fr       */
+/*   Created: 2024/02/06 12:44:23 by jleon-la          #+#    #+#             */
+/*   Updated: 2024/02/06 12:44:55 by jleon-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdarg.h>
-# include <stdio.h>
-# include <unistd.h>
-# include <stdlib.h>
+int	ft_address(unsigned long int address, char *base)
+{
+	int	i;
 
-int	ft_printf(char const *format, ...);
-#endif
+	i = 0;
+	if (address >= 16)
+		i = ft_address((unsigned long int)address / 16, base);	
+	write(1, &base[address % 16], 1);
+	return (i);
+}
