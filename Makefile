@@ -6,14 +6,13 @@
 #    By: jleon-la <jleon-la@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/25 11:57:00 by jleon-la          #+#    #+#              #
-#    Updated: 2024/02/06 12:46:43 by jleon-la         ###   ########.fr        #
+#    Updated: 2024/02/06 12:56:00 by jleon-la         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS			= ft_printf.c \
 					becomer.c \
 					becomer2.c \
-					formats.c \
 					main.c
 
 OBJS			= $(SRCS:.c=.o)
