@@ -6,7 +6,7 @@
 /*   By: jleon-la <jleon-la@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 11:56:45 by jleon-la          #+#    #+#             */
-/*   Updated: 2024/02/06 18:58:36 by jleon-la         ###   ########.fr       */
+/*   Updated: 2024/02/07 11:46:12 by jleon-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ int	ft_address(unsigned long long int address, char *base);
 int	ft_getint(int num, char *base);
 int	ft_getunsigned(unsigned int num, char *base);
 int	ft_gethex(unsigned int num, char *base);
+// MY EXTRA FUNCTION
+int	ft_tobnary(int num, char *base);
 
 int	formats(char c, va_list args, int total)
 {
@@ -45,6 +47,8 @@ int	formats(char c, va_list args, int total)
 		total += ft_getunsigned(va_arg(args, unsigned), "0123456789");
 	else if (c == '%')
 		total += write(1, "%", 1);
+	else if (c == 'b')
+		total += ft_tobnary(va_arg(args, int), "01");
 	return (total);
 }
 

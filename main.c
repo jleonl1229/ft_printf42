@@ -6,7 +6,7 @@
 /*   By: jleon-la <jleon-la@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 16:16:29 by jleon-la          #+#    #+#             */
-/*   Updated: 2024/02/06 17:38:22 by jleon-la         ###   ########.fr       */
+/*   Updated: 2024/02/07 11:50:29 by jleon-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,10 @@ int	main(void)
 	printf("real_total:%d\n", real_total);
 	printf("==============================\n");
 
-// Lenngth of the printf
+// My parameter %b
+	printf("==============================\n");
+	real_total = ft_printf("Binary: %b\n", 1);
+	printf("real_total:%d\n", real_total);
+	printf("==============================\n");
 	return (0);
 }
